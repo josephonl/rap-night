@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('./image.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #32CD32;
+    text-shadow: 2px 2px 5px black;
+}
+
+.candidates {
+    display: grid;
+    grid-template-columns: repeat(3, 250px); /* 3 colonnes fixes de 250px */
+    justify-content: center; /* Centre la grille horizontalement */
+    gap: 20px; /* Espace entre les cartes */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 850px; /* (250px * 3) + (20px * 2) */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.candidate {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    /* width géré par grid */
+    box-shadow: 0px 4px 10px rgba(50, 205, 50, 0.8);
+    transition: transform 0.3s;
+}
+
+/* Pour les écrans plus petits (responsive) */
+@media (max-width: 900px) {
+    .candidates {
+        grid-template-columns: repeat(2, 250px); /* 2 par ligne */
+    }
+}
+
+@media (max-width: 600px) {
+    .candidates {
+        grid-template-columns: 250px; /* 1 par ligne */
+    }
+}
+.candidate:hover {
+    transform: scale(1.05);
+}
+
+.candidate img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #32CD32;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #32CD32;
+}
+
+h1 {
+    font-size: 4vw; /* Taille adaptative */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 0px #00ff00, 4px 4px 5px rgba(0, 255, 0, 0.5);
+    letter-spacing: 5px;
+    padding: 10px;
+    background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    display: inline-block;
+    border: 3px solid #00ff00;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.7);
+    max-width: 90%;
+}
+
+/* Responsive pour téléphone */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 7vw; /* Augmente la taille sur petit écran */
+        letter-spacing: 2px;
+        padding: 5px;
+    }
+}
+
+section {
+    margin-bottom: 100px !important; /* Augmente l’espace sous la section */
+    padding-bottom: 20px;
+}
